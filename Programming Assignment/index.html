@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+        <script  type="text/javascript" src="Clock.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+    </head>
+
+    <body>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+            var button = document.getElementById("date");
+            function displaydate(){
+              alert("Today's date is: " + date);
+            }
+            button.addEventListener("click", displaydate);
+            });
+
+        </script>
+        <button class = "button button1" id="date">Click here for the date</button>
+        <form>
+            <div class="time_group">
+                <button class = "button" id="hongkong" onmousedown="settime(id)">Hong Kong</button>
+                <button class = "button" id="newyork" onmousedown="settime(id)">New York</button>
+                <button class = "button" id="paris" onmousedown="settime(id)">Paris</button>
+                <button class = "button" id="cairo" onmousedown="settime(id)">Cairo</button>
+                <button class = "button" id="sydney" onmousedown="settime(id)">Sydney</button>
+            </div>
+            <p>Hold down a button to see the time in that city!</p>
+            <h1 id="h1">The time this page last refreshed:</h1>
+        </form>
+        
+    </body>
+
+</html>
